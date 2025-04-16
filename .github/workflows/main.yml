@@ -1,0 +1,15 @@
+name: Simple CI on PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  log-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Log thông tin CI
+      run: |
+        echo "CI đang chạy vì có Pull Request!"
+        echo "Repo này để test CI/CD và liên kết Jira."
